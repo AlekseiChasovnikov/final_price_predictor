@@ -137,17 +137,6 @@ _Note_: Option `-d` (`--detach`) runs container in background and prints contain
 The application inside the container will be accessed using port __5444__ at the host's IP address.
 
 
-### 7*. Testing web-service with requests
-File **price_requests.py** contains python script for testing web-service with requests. It forms requests from the our cleaned dataset (dataset itself is not on GitHub) and sends request to the service, collecting the predictions for each instance. It then outputs the chart (scatterplot) showcasing the difference of 2 models predictions for one apartment, and difference between them and the true value from the dataset.
-
-Here's a result of comparison of predictions for requests for 10 random apartments:
-![model comparison](/images/model_comparison.png) 
-
-And the result is not as satisfying as was initially expected 👎
-Athough the test RMSE seemed good while building the model, it can be seen from chart that the predictions for most instances are rather far from the true price values.
-On the bright side, it seems that both 'simple' and 'extended' models catch the general tendency rather well ✊
-
-
 
 
 
